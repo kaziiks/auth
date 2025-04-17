@@ -11,16 +11,31 @@
     @endforeach
   </ul>
 @endif
-    <label for="first_name">First name:</label>
-  <input type="text" name="first_name" required><br><br>
-  <label for="last_name">Last name:</label>
-  <input type="text" name="last_name" required><br><br>
-  <label for="email">email</label>
-  <input type="email" name="email" required><br><br>
-  <label for="password">password</label>
-  <input type="text" name="password" required><br><br>
-  <label for="password">password confirmation</label>
-  <input type="text" name="password_confirmation" required><br><br>
-  <input type="submit" value="Submit">
-    </form>
+<div>
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" value="{{ old('first_name') }}" required>
+    </div>
+
+    <div>
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" value="{{ old('last_name') }}" required>
+    </div>
+
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{ old('email') }}" required>
+    </div>
+
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+
+    <div>
+        <label for="password_confirmation">Confirm Password:</label>
+        <input type="password" id="password_confirmation" name="password_confirmation" required>
+    </div>
+
+    <button type="submit">Register</button>
+</form>
 </x-layout>

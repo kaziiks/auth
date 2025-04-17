@@ -1,7 +1,7 @@
 <x-layout>
 @auth
   <p>Sveiks, {{ Auth::user()->first_name}}</p>
-  <form method="POST" action="{{ route('logout') }}">
+  <form method="POST" action="{{ route('logout') }}" >
   @csrf
   <button type="submit">izlogoties</button> 
   </form>
@@ -9,6 +9,6 @@
 </form>
 
 @guest
-  <p>Sveiks, viesi!</p>
+<a href="{{ route('login') }}" class="guest-login-button">Login</a>
 @endguest
 </x-layout>

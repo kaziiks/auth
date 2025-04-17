@@ -3,6 +3,8 @@
         <ul class="nav-links">
             <li><a href="/">welcome</a></li>
             <li><a href="/register">register</a></li>
+            <li><a href="/dashboard">dashboard</a></li>
+
             <li>
                 <a href="/logout"><form method="POST" action="{{ route('logout') }}">
                 @csrf
